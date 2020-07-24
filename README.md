@@ -6,17 +6,6 @@ https://studentsims20200722054722.azurewebsites.net/
 
 # Screenshots
 ### Swagger API Endpoints
-<style>
-.zoomimg {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  transition: transform .2s;
-}
-.zoomimg:hover {
-  transform: scale(1.5); 
-}
-</style>
 ![student API](img/1.png){.zoomimg}
 
 ### Student table
