@@ -6,7 +6,7 @@ https://studentsims20200722054722.azurewebsites.net/
 
 # Screenshots
 ### Swagger API Endpoints
-![student API](img/1.png){.zoomimg}
+![student API](img/1.png)
 
 ### Student table
 ![2.png](img/2.png)

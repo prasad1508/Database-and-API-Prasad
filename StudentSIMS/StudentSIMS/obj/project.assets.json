@@ -8411,11 +8411,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MSA Program\\Database and api\\MSA_sample_project\\StudentSIMS\\StudentSIMS\\StudentSIMS.csproj",
+      "projectUniqueName": "D:\\MSA Program\\Database and api\\MSA_sample_project\\Database-and-API-Prasad\\StudentSIMS\\StudentSIMS\\StudentSIMS.csproj",
       "projectName": "StudentSIMS",
-      "projectPath": "D:\\MSA Program\\Database and api\\MSA_sample_project\\StudentSIMS\\StudentSIMS\\StudentSIMS.csproj",
+      "projectPath": "D:\\MSA Program\\Database and api\\MSA_sample_project\\Database-and-API-Prasad\\StudentSIMS\\StudentSIMS\\StudentSIMS.csproj",
       "packagesPath": "C:\\Users\\prasa\\.nuget\\packages\\",
-      "outputPath": "D:\\MSA Program\\Database and api\\MSA_sample_project\\StudentSIMS\\StudentSIMS\\obj\\",
+      "outputPath": "D:\\MSA Program\\Database and api\\MSA_sample_project\\Database-and-API-Prasad\\StudentSIMS\\StudentSIMS\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
