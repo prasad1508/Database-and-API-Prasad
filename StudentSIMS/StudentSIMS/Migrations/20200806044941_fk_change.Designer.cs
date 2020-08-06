@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StudentSIMS.Data;
 
 namespace StudentSIMS.Migrations
 {
     [DbContext(typeof(StudentContext))]
-    partial class StudentContextModelSnapshot : ModelSnapshot
+    [Migration("20200806044941_fk_change")]
+    partial class fk_change
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

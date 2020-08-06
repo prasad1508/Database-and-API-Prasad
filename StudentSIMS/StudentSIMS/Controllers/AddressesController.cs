@@ -26,14 +26,15 @@ namespace StudentSIMS.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Address>>> GetAddress()
         {
-            return await _context.Address.ToListAsync();
+            var result = await _context.Address.Include(x=>x.Student).ToListAsync();
+            return result;
         }
 
         // GET: api/Addresses/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Address>> GetAddress(int id)
         {
-            var address = await _context.Address.FindAsync(id);
+            var address = await _context.Address.Include(x => x.Student).FirstOrDefaultAsync(y => y.AddressId == id);
 
             if (address == null)
             {

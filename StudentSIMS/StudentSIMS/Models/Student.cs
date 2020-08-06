@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace StudentSIMS.Models
@@ -27,8 +28,6 @@ namespace StudentSIMS.Models
 
        //[Timestamp]
         public DateTime timeCreated { get; set; }
-
-
-        public ICollection<Address> Addresses { get; set; }
+        public IList<Address> Addresses { get; set; }
     }
 }

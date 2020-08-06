@@ -23,16 +23,17 @@ namespace StudentSIMS.Controllers
 
         // GET: api/Students
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Student>>> GetStudent()
+        public async Task<ActionResult<IList<Student>>> GetStudent()
         {
-            return await _context.Student.ToListAsync();
+            var results = await _context.Student.Include(x=>x.Addresses).ToListAsync();
+            return results;
         }
 
         // GET: api/Students/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Student>> GetStudent(int id)
         {
-            var student = await _context.Student.FindAsync(id);
+            var student = await _context.Student.Include(x=>x.Addresses).FirstOrDefaultAsync(y=>y.studentId== id);
 
             if (student == null)
             {

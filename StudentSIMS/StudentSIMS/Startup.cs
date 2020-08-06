@@ -13,6 +13,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using StudentSIMS.Data;
+using Newtonsoft.Json.Schema;
 
 namespace StudentSIMS
 {
@@ -32,11 +33,13 @@ namespace StudentSIMS
             var connection = Configuration.GetConnectionString("schoolSIMSConnection");
             services.AddDbContext<StudentContext>(options => options.UseSqlServer(connection));
 
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "StudentSIMS", Version = "v1" });
             });
-            services.AddControllers();
+           
+            services.AddControllers().AddNewtonsoftJson(option => option.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
             services.AddCors();
         }
